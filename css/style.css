@@ -1,0 +1,18 @@
+div {
+    width: 500px;
+    margin: 0 auto;
+}
+.expanded {
+    display: block;
+}
+p {
+    display: none;
+}
+.target-info {
+    border: 1px solid red;
+    height: 200px;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

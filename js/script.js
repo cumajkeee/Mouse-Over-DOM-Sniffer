@@ -18,6 +18,9 @@ for (var i = 0; i<tabList.length; i++){
         currentContent = target;
     };
 }
+
+// task is here*****************************************************************************************
+
 function removeChildren(node) {
     var children = node.childNodes;
 
@@ -25,6 +28,7 @@ function removeChildren(node) {
         node.removeChild(children[0])
     }
 }
+
 
 function showElementAttr(e) {
     var target = e.target || event.srcElement;

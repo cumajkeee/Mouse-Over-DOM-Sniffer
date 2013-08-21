@@ -1,25 +1,7 @@
-var tabik = document.querySelector('.wrapper');
-var tabList = tabik.querySelectorAll('.tab-wrapper li');
-var currentTab = tabik.querySelector('.active');
-var currentContent = tabik.querySelector('.expanded');
 var target;
 var elementAttr = document.querySelector('.target-info');
 var body = document.getElementsByTagName('body')[0];
 var highlighted = document.querySelector('.highlighted');
-
-for (var i = 0; i<tabList.length; i++){
-    tabList[i].onclick = function(){
-        currentTab.classList.remove('active');
-        currentTab = this;
-        this.classList.add('active');
-        currentContent.classList.remove('expanded');
-        target = tabik.querySelector('.content_tab'+this.dataset.tab);
-        target.classList.add('expanded');
-        currentContent = target;
-    };
-}
-
-// task is here*****************************************************************************************
 
 function removeChildren(node) {
     var children = node.childNodes;
@@ -51,4 +33,4 @@ function showElementAttr(e) {
     return false;
 }
 
-tabik.addEventListener('mouseover', showElementAttr, false);
+body.addEventListener('mouseover', showElementAttr, false);

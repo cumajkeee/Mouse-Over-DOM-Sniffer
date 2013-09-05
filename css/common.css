@@ -167,5 +167,7 @@ div li:hover {
     line-height: 10px;
     height: 100%;
     border: 1px solid red;
-    width: 500px;
+    width: 400px;
+    z-index: -1;
+    background-color: #ccc;
 }

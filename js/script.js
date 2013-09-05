@@ -18,15 +18,18 @@ var Sniffer = (function (){
 
         if (relatedTarget){
             relatedTarget.style.background="";
-            relatedTarget.style.border="";
+            relatedTarget.style.outline="";
         }
         target.style.background="#FFFF00";
-        target.style.border="1px solid #FF0000";
+        target.style.outline="1px solid #FF0000";
+//        target.style.borderStyle="inset";
 
         for (var key in target.attributes){
-            var item = document.createElement('div');
-            item.innerHTML = "<b>Attr:</b> " + key + " <b>value:</b>" + target.attributes[key];
-            elementAttr.appendChild(item);
+            if (target.hasOwnProperty(key)){
+                var item = document.createElement('div');
+                item.innerHTML = "<b>Attr:</b> " + key + " <b>value:</b>" + target.attributes[key];
+                elementAttr.appendChild(item);
+            }
         }
         return false;
     };
@@ -37,5 +40,3 @@ var Sniffer = (function (){
 
     window.addEventListener('mouseover', instance.showElementAttr, false);
 })();
-
-
